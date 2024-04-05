@@ -1,1 +1,1 @@
-# CRM_ubos
+This app is built using UBOS
