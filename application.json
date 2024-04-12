@@ -6,7 +6,7 @@
     "isPublic": true,
     "isShowPlatformTag": true,
     "createdAt": "2023-03-02T13:50:57.853Z",
-    "updatedAt": "2024-04-05T10:50:36.248Z",
+    "updatedAt": "2024-04-12T11:20:18.793Z",
     "deleted": false,
     "pages": [
         {
@@ -3386,10 +3386,278 @@
                 }
             },
             {
-                "label": "POST |  | /get_single_contact",
+                "label": "PUT |  | /addToList",
+                "value": {
+                    "url": "/addToList",
+                    "method": "put",
+                    "datasource": {
+                        "datasourceConfiguration": {
+                            "url": "https://auth-nr-6495-65fc1869116ca212000000d2.ubos.tech",
+                            "templateData": {
+                                "cloneTemplateSessionId": "65fc18a64c7c2d1100000013",
+                                "numberOfServices": 3,
+                                "isPromotionalTemplate": false,
+                                "templateName": "Unified Authorization Template"
+                            }
+                        },
+                        "id": "65fc18b24c7c2d1100000015",
+                        "invalids": [],
+                        "isValid": true,
+                        "name": "auth-nr-6495",
+                        "new": false,
+                        "type": "api",
+                        "organizationId": "Org",
+                        "pluginId": "API",
+                        "userPermissions": [
+                            "manage:service",
+                            "read:service"
+                        ],
+                        "settings_data": {
+                            "gitName": "",
+                            "projectName": "auth-nr-6495",
+                            "systemType": "latest",
+                            "gitUrl": "",
+                            "gitPassword": "",
+                            "urlNodeRed": "https://auth-nr-6495-65fc1869116ca212000000d2.ubos.tech",
+                            "serviceId": "auth-nr-6495-ubos-th457-auth-nr-6495",
+                            "applicationId": "65fc186a116ca212000000d3",
+                            "env": [
+                                {
+                                    "name": "nodeUrl",
+                                    "value": "https://auth-nr-6495-65fc1869116ca212000000d2.ubos.tech"
+                                },
+                                {
+                                    "name": "uiUrl",
+                                    "value": "https://auth-ui-5924-65fc1869116ca212000000d2.ubos.tech"
+                                },
+                                {
+                                    "name": "AUTHDB-MONGO-HOST-NAME",
+                                    "value": "authdb-6984-ubos-th457-authdb-6984.ubos-th457"
+                                },
+                                {
+                                    "name": "AUTHDB-MONGO-DB-NAME",
+                                    "value": "authdb-6984"
+                                },
+                                {
+                                    "name": "AUTHDB-MONGO-USER-NAME",
+                                    "value": "ddmytrodubina2697"
+                                },
+                                {
+                                    "name": "AUTHDB-MONGO-PASSWORD",
+                                    "value": "veQkrILu"
+                                }
+                            ],
+                            "status": "ready"
+                        }
+                    }
+                }
+            },
+            {
+                "label": "GET |  | /get_single_contact",
                 "value": {
                     "url": "/get_single_contact",
-                    "method": "post",
+                    "method": "get",
+                    "datasource": {
+                        "datasourceConfiguration": {
+                            "url": "https://auth-nr-6495-65fc1869116ca212000000d2.ubos.tech",
+                            "templateData": {
+                                "cloneTemplateSessionId": "65fc18a64c7c2d1100000013",
+                                "numberOfServices": 3,
+                                "isPromotionalTemplate": false,
+                                "templateName": "Unified Authorization Template"
+                            }
+                        },
+                        "id": "65fc18b24c7c2d1100000015",
+                        "invalids": [],
+                        "isValid": true,
+                        "name": "auth-nr-6495",
+                        "new": false,
+                        "type": "api",
+                        "organizationId": "Org",
+                        "pluginId": "API",
+                        "userPermissions": [
+                            "manage:service",
+                            "read:service"
+                        ],
+                        "settings_data": {
+                            "gitName": "",
+                            "projectName": "auth-nr-6495",
+                            "systemType": "latest",
+                            "gitUrl": "",
+                            "gitPassword": "",
+                            "urlNodeRed": "https://auth-nr-6495-65fc1869116ca212000000d2.ubos.tech",
+                            "serviceId": "auth-nr-6495-ubos-th457-auth-nr-6495",
+                            "applicationId": "65fc186a116ca212000000d3",
+                            "env": [
+                                {
+                                    "name": "nodeUrl",
+                                    "value": "https://auth-nr-6495-65fc1869116ca212000000d2.ubos.tech"
+                                },
+                                {
+                                    "name": "uiUrl",
+                                    "value": "https://auth-ui-5924-65fc1869116ca212000000d2.ubos.tech"
+                                },
+                                {
+                                    "name": "AUTHDB-MONGO-HOST-NAME",
+                                    "value": "authdb-6984-ubos-th457-authdb-6984.ubos-th457"
+                                },
+                                {
+                                    "name": "AUTHDB-MONGO-DB-NAME",
+                                    "value": "authdb-6984"
+                                },
+                                {
+                                    "name": "AUTHDB-MONGO-USER-NAME",
+                                    "value": "ddmytrodubina2697"
+                                },
+                                {
+                                    "name": "AUTHDB-MONGO-PASSWORD",
+                                    "value": "veQkrILu"
+                                }
+                            ],
+                            "status": "ready"
+                        }
+                    }
+                }
+            },
+            {
+                "label": "PUT |  | /editContact",
+                "value": {
+                    "url": "/editContact",
+                    "method": "put",
+                    "datasource": {
+                        "datasourceConfiguration": {
+                            "url": "https://auth-nr-6495-65fc1869116ca212000000d2.ubos.tech",
+                            "templateData": {
+                                "cloneTemplateSessionId": "65fc18a64c7c2d1100000013",
+                                "numberOfServices": 3,
+                                "isPromotionalTemplate": false,
+                                "templateName": "Unified Authorization Template"
+                            }
+                        },
+                        "id": "65fc18b24c7c2d1100000015",
+                        "invalids": [],
+                        "isValid": true,
+                        "name": "auth-nr-6495",
+                        "new": false,
+                        "type": "api",
+                        "organizationId": "Org",
+                        "pluginId": "API",
+                        "userPermissions": [
+                            "manage:service",
+                            "read:service"
+                        ],
+                        "settings_data": {
+                            "gitName": "",
+                            "projectName": "auth-nr-6495",
+                            "systemType": "latest",
+                            "gitUrl": "",
+                            "gitPassword": "",
+                            "urlNodeRed": "https://auth-nr-6495-65fc1869116ca212000000d2.ubos.tech",
+                            "serviceId": "auth-nr-6495-ubos-th457-auth-nr-6495",
+                            "applicationId": "65fc186a116ca212000000d3",
+                            "env": [
+                                {
+                                    "name": "nodeUrl",
+                                    "value": "https://auth-nr-6495-65fc1869116ca212000000d2.ubos.tech"
+                                },
+                                {
+                                    "name": "uiUrl",
+                                    "value": "https://auth-ui-5924-65fc1869116ca212000000d2.ubos.tech"
+                                },
+                                {
+                                    "name": "AUTHDB-MONGO-HOST-NAME",
+                                    "value": "authdb-6984-ubos-th457-authdb-6984.ubos-th457"
+                                },
+                                {
+                                    "name": "AUTHDB-MONGO-DB-NAME",
+                                    "value": "authdb-6984"
+                                },
+                                {
+                                    "name": "AUTHDB-MONGO-USER-NAME",
+                                    "value": "ddmytrodubina2697"
+                                },
+                                {
+                                    "name": "AUTHDB-MONGO-PASSWORD",
+                                    "value": "veQkrILu"
+                                }
+                            ],
+                            "status": "ready"
+                        }
+                    }
+                }
+            },
+            {
+                "label": "PUT |  | deleteContact",
+                "value": {
+                    "url": "deleteContact",
+                    "method": "put",
+                    "datasource": {
+                        "datasourceConfiguration": {
+                            "url": "https://auth-nr-6495-65fc1869116ca212000000d2.ubos.tech",
+                            "templateData": {
+                                "cloneTemplateSessionId": "65fc18a64c7c2d1100000013",
+                                "numberOfServices": 3,
+                                "isPromotionalTemplate": false,
+                                "templateName": "Unified Authorization Template"
+                            }
+                        },
+                        "id": "65fc18b24c7c2d1100000015",
+                        "invalids": [],
+                        "isValid": true,
+                        "name": "auth-nr-6495",
+                        "new": false,
+                        "type": "api",
+                        "organizationId": "Org",
+                        "pluginId": "API",
+                        "userPermissions": [
+                            "manage:service",
+                            "read:service"
+                        ],
+                        "settings_data": {
+                            "gitName": "",
+                            "projectName": "auth-nr-6495",
+                            "systemType": "latest",
+                            "gitUrl": "",
+                            "gitPassword": "",
+                            "urlNodeRed": "https://auth-nr-6495-65fc1869116ca212000000d2.ubos.tech",
+                            "serviceId": "auth-nr-6495-ubos-th457-auth-nr-6495",
+                            "applicationId": "65fc186a116ca212000000d3",
+                            "env": [
+                                {
+                                    "name": "nodeUrl",
+                                    "value": "https://auth-nr-6495-65fc1869116ca212000000d2.ubos.tech"
+                                },
+                                {
+                                    "name": "uiUrl",
+                                    "value": "https://auth-ui-5924-65fc1869116ca212000000d2.ubos.tech"
+                                },
+                                {
+                                    "name": "AUTHDB-MONGO-HOST-NAME",
+                                    "value": "authdb-6984-ubos-th457-authdb-6984.ubos-th457"
+                                },
+                                {
+                                    "name": "AUTHDB-MONGO-DB-NAME",
+                                    "value": "authdb-6984"
+                                },
+                                {
+                                    "name": "AUTHDB-MONGO-USER-NAME",
+                                    "value": "ddmytrodubina2697"
+                                },
+                                {
+                                    "name": "AUTHDB-MONGO-PASSWORD",
+                                    "value": "veQkrILu"
+                                }
+                            ],
+                            "status": "ready"
+                        }
+                    }
+                }
+            },
+            {
+                "label": "GET |  | getOwners",
+                "value": {
+                    "url": "getOwners",
+                    "method": "get",
                     "datasource": {
                         "datasourceConfiguration": {
                             "url": "https://auth-nr-6495-65fc1869116ca212000000d2.ubos.tech",
