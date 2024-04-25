@@ -14459,437 +14459,6 @@
                                 "onClick": "{{showModal('list_modal')}}"
                             },
                             {
-                                "isVisible": true,
-                                "animateLoading": true,
-                                "defaultSelectedRow": "0",
-                                "label": "Data",
-                                "widgetName": "lists_table",
-                                "searchKey": "",
-                                "textSize": "PARAGRAPH",
-                                "horizontalAlignment": "LEFT",
-                                "verticalAlignment": "CENTER",
-                                "totalRecordsCount": 0,
-                                "defaultPageSize": 0,
-                                "isShowLoading": true,
-                                "dynamicBindingPathList": [
-                                    {
-                                        "key": "tableData"
-                                    },
-                                    {
-                                        "key": "primaryColumns._id.computedValue"
-                                    },
-                                    {
-                                        "key": "primaryColumns.name.computedValue"
-                                    },
-                                    {
-                                        "key": "primaryColumns.email.computedValue"
-                                    },
-                                    {
-                                        "key": "primaryColumns.phone.computedValue"
-                                    },
-                                    {
-                                        "key": "primaryColumns.leadstatus.computedValue"
-                                    },
-                                    {
-                                        "key": "primaryColumns.comment.computedValue"
-                                    },
-                                    {
-                                        "key": "primaryColumns.owner.computedValue"
-                                    },
-                                    {
-                                        "key": "primaryColumns.country.computedValue"
-                                    },
-                                    {
-                                        "key": "primaryColumns.city.computedValue"
-                                    },
-                                    {
-                                        "key": "primaryColumns.industry.computedValue"
-                                    },
-                                    {
-                                        "key": "primaryColumns.createDate.computedValue"
-                                    },
-                                    {
-                                        "key": "primaryColumns.deleted.computedValue"
-                                    },
-                                    {
-                                        "key": "derivedColumns.customColumn2.computedValue"
-                                    }
-                                ],
-                                "primaryColumns": {
-                                    "customColumn2": {
-                                        "index": 5,
-                                        "width": 150,
-                                        "id": "customColumn2",
-                                        "columnType": "text",
-                                        "enableFilter": true,
-                                        "enableSort": true,
-                                        "isVisible": true,
-                                        "isDisabled": false,
-                                        "isCellVisible": true,
-                                        "isDerived": true,
-                                        "label": "contact owner email",
-                                        "computedValue": "",
-                                        "buttonStyle": "rgb(3, 179, 101)",
-                                        "buttonColor": "#03B365",
-                                        "menuColor": "#03B365",
-                                        "labelColor": "#FFFFFF"
-                                    },
-                                    "customColumn3": {
-                                        "index": 6,
-                                        "width": 150,
-                                        "id": "customColumn3",
-                                        "columnType": "text",
-                                        "enableFilter": true,
-                                        "enableSort": true,
-                                        "isVisible": true,
-                                        "isDisabled": false,
-                                        "isCellVisible": true,
-                                        "isDerived": true,
-                                        "label": "created at",
-                                        "computedValue": "",
-                                        "buttonStyle": "rgb(3, 179, 101)",
-                                        "buttonColor": "#03B365",
-                                        "menuColor": "#03B365",
-                                        "labelColor": "#FFFFFF"
-                                    },
-                                    "customColumn7": {
-                                        "index": 10,
-                                        "width": 150,
-                                        "id": "customColumn7",
-                                        "columnType": "iconButton",
-                                        "enableFilter": true,
-                                        "enableSort": true,
-                                        "isVisible": true,
-                                        "isDisabled": false,
-                                        "isCellVisible": true,
-                                        "isDerived": true,
-                                        "label": "view",
-                                        "computedValue": "",
-                                        "buttonStyle": "rgb(3, 179, 101)",
-                                        "buttonColor": "#2E3D49",
-                                        "menuColor": "#03B365",
-                                        "labelColor": "#FFFFFF",
-                                        "iconName": "eye-open",
-                                        "borderRadius": "CIRCLE",
-                                        "onClick": "{{navigateTo('Contact',{_id:contacts_table.selectedRow._id})}}"
-                                    },
-                                    "_id": {
-                                        "index": 0,
-                                        "width": 150,
-                                        "id": "_id",
-                                        "horizontalAlignment": "LEFT",
-                                        "verticalAlignment": "CENTER",
-                                        "columnType": "text",
-                                        "textSize": "PARAGRAPH",
-                                        "enableFilter": true,
-                                        "enableSort": true,
-                                        "isVisible": true,
-                                        "isDisabled": false,
-                                        "isCellVisible": true,
-                                        "isDerived": false,
-                                        "label": "_id",
-                                        "computedValue": "{{contacts_table.sanitizedTableData.map((currentRow) => ( currentRow._id))}}"
-                                    },
-                                    "name": {
-                                        "index": 1,
-                                        "width": 150,
-                                        "id": "name",
-                                        "horizontalAlignment": "LEFT",
-                                        "verticalAlignment": "CENTER",
-                                        "columnType": "text",
-                                        "textSize": "PARAGRAPH",
-                                        "enableFilter": true,
-                                        "enableSort": true,
-                                        "isVisible": true,
-                                        "isDisabled": false,
-                                        "isCellVisible": true,
-                                        "isDerived": false,
-                                        "label": "name",
-                                        "computedValue": "{{contacts_table.sanitizedTableData.map((currentRow) => ( currentRow.name))}}"
-                                    },
-                                    "email": {
-                                        "index": 2,
-                                        "width": 150,
-                                        "id": "email",
-                                        "horizontalAlignment": "LEFT",
-                                        "verticalAlignment": "CENTER",
-                                        "columnType": "text",
-                                        "textSize": "PARAGRAPH",
-                                        "enableFilter": true,
-                                        "enableSort": true,
-                                        "isVisible": true,
-                                        "isDisabled": false,
-                                        "isCellVisible": true,
-                                        "isDerived": false,
-                                        "label": "email",
-                                        "computedValue": "{{contacts_table.sanitizedTableData.map((currentRow) => ( currentRow.email))}}"
-                                    },
-                                    "phone": {
-                                        "index": 3,
-                                        "width": 150,
-                                        "id": "phone",
-                                        "horizontalAlignment": "LEFT",
-                                        "verticalAlignment": "CENTER",
-                                        "columnType": "text",
-                                        "textSize": "PARAGRAPH",
-                                        "enableFilter": true,
-                                        "enableSort": true,
-                                        "isVisible": true,
-                                        "isDisabled": false,
-                                        "isCellVisible": true,
-                                        "isDerived": false,
-                                        "label": "phone",
-                                        "computedValue": "{{contacts_table.sanitizedTableData.map((currentRow) => ( currentRow.phone))}}"
-                                    },
-                                    "leadstatus": {
-                                        "index": 4,
-                                        "width": 150,
-                                        "id": "leadstatus",
-                                        "horizontalAlignment": "LEFT",
-                                        "verticalAlignment": "CENTER",
-                                        "columnType": "text",
-                                        "textSize": "PARAGRAPH",
-                                        "enableFilter": true,
-                                        "enableSort": true,
-                                        "isVisible": true,
-                                        "isDisabled": false,
-                                        "isCellVisible": true,
-                                        "isDerived": false,
-                                        "label": "leadstatus",
-                                        "computedValue": "{{contacts_table.sanitizedTableData.map((currentRow) => ( currentRow.leadstatus))}}"
-                                    },
-                                    "comment": {
-                                        "index": 5,
-                                        "width": 150,
-                                        "id": "comment",
-                                        "horizontalAlignment": "LEFT",
-                                        "verticalAlignment": "CENTER",
-                                        "columnType": "text",
-                                        "textSize": "PARAGRAPH",
-                                        "enableFilter": true,
-                                        "enableSort": true,
-                                        "isVisible": true,
-                                        "isDisabled": false,
-                                        "isCellVisible": true,
-                                        "isDerived": false,
-                                        "label": "comment",
-                                        "computedValue": "{{contacts_table.sanitizedTableData.map((currentRow) => ( currentRow.comment))}}"
-                                    },
-                                    "owner": {
-                                        "index": 6,
-                                        "width": 150,
-                                        "id": "owner",
-                                        "horizontalAlignment": "LEFT",
-                                        "verticalAlignment": "CENTER",
-                                        "columnType": "text",
-                                        "textSize": "PARAGRAPH",
-                                        "enableFilter": true,
-                                        "enableSort": true,
-                                        "isVisible": true,
-                                        "isDisabled": false,
-                                        "isCellVisible": true,
-                                        "isDerived": false,
-                                        "label": "owner",
-                                        "computedValue": "{{contacts_table.sanitizedTableData.map((currentRow) => ( currentRow.owner))}}"
-                                    },
-                                    "country": {
-                                        "index": 7,
-                                        "width": 150,
-                                        "id": "country",
-                                        "horizontalAlignment": "LEFT",
-                                        "verticalAlignment": "CENTER",
-                                        "columnType": "text",
-                                        "textSize": "PARAGRAPH",
-                                        "enableFilter": true,
-                                        "enableSort": true,
-                                        "isVisible": true,
-                                        "isDisabled": false,
-                                        "isCellVisible": true,
-                                        "isDerived": false,
-                                        "label": "country",
-                                        "computedValue": "{{contacts_table.sanitizedTableData.map((currentRow) => ( currentRow.country))}}"
-                                    },
-                                    "city": {
-                                        "index": 8,
-                                        "width": 150,
-                                        "id": "city",
-                                        "horizontalAlignment": "LEFT",
-                                        "verticalAlignment": "CENTER",
-                                        "columnType": "text",
-                                        "textSize": "PARAGRAPH",
-                                        "enableFilter": true,
-                                        "enableSort": true,
-                                        "isVisible": true,
-                                        "isDisabled": false,
-                                        "isCellVisible": true,
-                                        "isDerived": false,
-                                        "label": "city",
-                                        "computedValue": "{{contacts_table.sanitizedTableData.map((currentRow) => ( currentRow.city))}}"
-                                    },
-                                    "industry": {
-                                        "index": 9,
-                                        "width": 150,
-                                        "id": "industry",
-                                        "horizontalAlignment": "LEFT",
-                                        "verticalAlignment": "CENTER",
-                                        "columnType": "text",
-                                        "textSize": "PARAGRAPH",
-                                        "enableFilter": true,
-                                        "enableSort": true,
-                                        "isVisible": true,
-                                        "isDisabled": false,
-                                        "isCellVisible": true,
-                                        "isDerived": false,
-                                        "label": "industry",
-                                        "computedValue": "{{contacts_table.sanitizedTableData.map((currentRow) => ( currentRow.industry))}}"
-                                    },
-                                    "createDate": {
-                                        "index": 10,
-                                        "width": 150,
-                                        "id": "createDate",
-                                        "horizontalAlignment": "LEFT",
-                                        "verticalAlignment": "CENTER",
-                                        "columnType": "text",
-                                        "textSize": "PARAGRAPH",
-                                        "enableFilter": true,
-                                        "enableSort": true,
-                                        "isVisible": true,
-                                        "isDisabled": false,
-                                        "isCellVisible": true,
-                                        "isDerived": false,
-                                        "label": "createDate",
-                                        "computedValue": "{{contacts_table.sanitizedTableData.map((currentRow) => ( currentRow.createDate))}}"
-                                    },
-                                    "deleted": {
-                                        "index": 11,
-                                        "width": 150,
-                                        "id": "deleted",
-                                        "horizontalAlignment": "LEFT",
-                                        "verticalAlignment": "CENTER",
-                                        "columnType": "text",
-                                        "textSize": "PARAGRAPH",
-                                        "enableFilter": true,
-                                        "enableSort": true,
-                                        "isVisible": true,
-                                        "isDisabled": false,
-                                        "isCellVisible": true,
-                                        "isDerived": false,
-                                        "label": "deleted",
-                                        "computedValue": "{{contacts_table.sanitizedTableData.map((currentRow) => ( currentRow.deleted))}}"
-                                    }
-                                },
-                                "derivedColumns": {
-                                    "customColumn2": {
-                                        "index": 5,
-                                        "width": 150,
-                                        "id": "customColumn2",
-                                        "columnType": "text",
-                                        "enableFilter": true,
-                                        "enableSort": true,
-                                        "isVisible": true,
-                                        "isDisabled": false,
-                                        "isCellVisible": true,
-                                        "isDerived": true,
-                                        "label": "contact owner email",
-                                        "computedValue": "{{contacts_table.sanitizedTableData.map((currentRow) => ( main.user.auth_module.user.info.user._id))}}",
-                                        "buttonStyle": "rgb(3, 179, 101)",
-                                        "buttonColor": "#03B365",
-                                        "menuColor": "#03B365",
-                                        "labelColor": "#FFFFFF"
-                                    },
-                                    "customColumn3": {
-                                        "index": 6,
-                                        "width": 150,
-                                        "id": "customColumn3",
-                                        "columnType": "text",
-                                        "enableFilter": true,
-                                        "enableSort": true,
-                                        "isVisible": true,
-                                        "isDisabled": false,
-                                        "isCellVisible": true,
-                                        "isDerived": true,
-                                        "label": "created at",
-                                        "computedValue": "",
-                                        "buttonStyle": "rgb(3, 179, 101)",
-                                        "buttonColor": "#03B365",
-                                        "menuColor": "#03B365",
-                                        "labelColor": "#FFFFFF"
-                                    },
-                                    "customColumn7": {
-                                        "index": 10,
-                                        "width": 150,
-                                        "id": "customColumn7",
-                                        "columnType": "iconButton",
-                                        "enableFilter": true,
-                                        "enableSort": true,
-                                        "isVisible": true,
-                                        "isDisabled": false,
-                                        "isCellVisible": true,
-                                        "isDerived": true,
-                                        "label": "view",
-                                        "computedValue": "",
-                                        "buttonStyle": "rgb(3, 179, 101)",
-                                        "buttonColor": "#2E3D49",
-                                        "menuColor": "#03B365",
-                                        "labelColor": "#FFFFFF",
-                                        "iconName": "eye-open",
-                                        "borderRadius": "CIRCLE"
-                                    }
-                                },
-                                "tableData": "{{getLists.data}}",
-                                "columnSizeMap": {
-                                    "task": 245,
-                                    "step": 62,
-                                    "status": 75
-                                },
-                                "columnOrder": [
-                                    "_id",
-                                    "name",
-                                    "email",
-                                    "phone",
-                                    "leadstatus",
-                                    "comment",
-                                    "owner",
-                                    "country",
-                                    "city",
-                                    "industry",
-                                    "createDate",
-                                    "deleted",
-                                    "customColumn2",
-                                    "customColumn3",
-                                    "customColumn7"
-                                ],
-                                "enableClientSideSearch": true,
-                                "isVisibleSearch": true,
-                                "isVisibleFilters": true,
-                                "isVisibleDownload": true,
-                                "isVisiblePagination": true,
-                                "isSortable": true,
-                                "delimiter": ",",
-                                "version": 3,
-                                "type": "TABLE_WIDGET",
-                                "hideCard": false,
-                                "displayName": "Table",
-                                "key": "pxmmdg5433",
-                                "iconSVG": "/static/media/icon.db8a9cbd.svg",
-                                "widgetId": "77yyhl0ohs",
-                                "renderMode": "CANVAS",
-                                "isLoading": false,
-                                "parentColumnSpace": 10.34375,
-                                "parentRowSpace": 10,
-                                "leftColumn": 7,
-                                "rightColumn": 64,
-                                "topRow": 13,
-                                "bottomRow": 46,
-                                "parentId": "0",
-                                "dynamicTriggerPathList": [
-                                    {
-                                        "key": "primaryColumns.customColumn7.onClick"
-                                    }
-                                ],
-                                "dynamicPropertyPathList": []
-                            },
-                            {
                                 "width": 456,
                                 "height": 240,
                                 "canEscapeKeyClose": true,
@@ -15030,7 +14599,7 @@
                                                 "topRow": 16,
                                                 "bottomRow": 20,
                                                 "parentId": "ckwp6e3uxu",
-                                                "onClick": "{{createList.run(() => showAlert('1','success'), () => showAlert('2','error'))}}",
+                                                "onClick": "{{createNewList.run(() => showAlert('1','success'), () => showAlert('2','error'))}}",
                                                 "dynamicBindingPathList": [],
                                                 "dynamicTriggerPathList": [
                                                     {
@@ -15184,6 +14753,274 @@
                                     }
                                 ],
                                 "dynamicTriggerPathList": []
+                            },
+                            {
+                                "isVisible": true,
+                                "animateLoading": true,
+                                "defaultSelectedRow": "0",
+                                "label": "Data",
+                                "widgetName": "Table1",
+                                "searchKey": "",
+                                "textSize": "PARAGRAPH",
+                                "horizontalAlignment": "LEFT",
+                                "verticalAlignment": "CENTER",
+                                "totalRecordsCount": 0,
+                                "defaultPageSize": 0,
+                                "isShowLoading": true,
+                                "dynamicBindingPathList": [
+                                    {
+                                        "key": "tableData"
+                                    },
+                                    {
+                                        "key": "primaryColumns._id.computedValue"
+                                    },
+                                    {
+                                        "key": "primaryColumns.name.computedValue"
+                                    },
+                                    {
+                                        "key": "primaryColumns.description.computedValue"
+                                    },
+                                    {
+                                        "key": "primaryColumns.creatorID.computedValue"
+                                    },
+                                    {
+                                        "key": "primaryColumns.creatorName.computedValue"
+                                    },
+                                    {
+                                        "key": "primaryColumns.creatorEmail.computedValue"
+                                    },
+                                    {
+                                        "key": "primaryColumns.deteled.computedValue"
+                                    },
+                                    {
+                                        "key": "primaryColumns.contactIDs.computedValue"
+                                    }
+                                ],
+                                "primaryColumns": {
+                                    "_id": {
+                                        "index": 0,
+                                        "width": 150,
+                                        "id": "_id",
+                                        "horizontalAlignment": "LEFT",
+                                        "verticalAlignment": "CENTER",
+                                        "columnType": "text",
+                                        "textSize": "PARAGRAPH",
+                                        "enableFilter": true,
+                                        "enableSort": true,
+                                        "isVisible": true,
+                                        "isDisabled": false,
+                                        "isCellVisible": true,
+                                        "isDerived": false,
+                                        "label": "_id",
+                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow._id))}}"
+                                    },
+                                    "name": {
+                                        "index": 1,
+                                        "width": 150,
+                                        "id": "name",
+                                        "horizontalAlignment": "LEFT",
+                                        "verticalAlignment": "CENTER",
+                                        "columnType": "text",
+                                        "textSize": "PARAGRAPH",
+                                        "enableFilter": true,
+                                        "enableSort": true,
+                                        "isVisible": true,
+                                        "isDisabled": false,
+                                        "isCellVisible": true,
+                                        "isDerived": false,
+                                        "label": "name",
+                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.name))}}"
+                                    },
+                                    "description": {
+                                        "index": 2,
+                                        "width": 150,
+                                        "id": "description",
+                                        "horizontalAlignment": "LEFT",
+                                        "verticalAlignment": "CENTER",
+                                        "columnType": "text",
+                                        "textSize": "PARAGRAPH",
+                                        "enableFilter": true,
+                                        "enableSort": true,
+                                        "isVisible": true,
+                                        "isDisabled": false,
+                                        "isCellVisible": true,
+                                        "isDerived": false,
+                                        "label": "description",
+                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.description))}}"
+                                    },
+                                    "creatorID": {
+                                        "index": 3,
+                                        "width": 150,
+                                        "id": "creatorID",
+                                        "horizontalAlignment": "LEFT",
+                                        "verticalAlignment": "CENTER",
+                                        "columnType": "text",
+                                        "textSize": "PARAGRAPH",
+                                        "enableFilter": true,
+                                        "enableSort": true,
+                                        "isVisible": true,
+                                        "isDisabled": false,
+                                        "isCellVisible": true,
+                                        "isDerived": false,
+                                        "label": "creatorID",
+                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.creatorID))}}"
+                                    },
+                                    "creatorName": {
+                                        "index": 4,
+                                        "width": 150,
+                                        "id": "creatorName",
+                                        "horizontalAlignment": "LEFT",
+                                        "verticalAlignment": "CENTER",
+                                        "columnType": "text",
+                                        "textSize": "PARAGRAPH",
+                                        "enableFilter": true,
+                                        "enableSort": true,
+                                        "isVisible": true,
+                                        "isDisabled": false,
+                                        "isCellVisible": true,
+                                        "isDerived": false,
+                                        "label": "creatorName",
+                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.creatorName))}}"
+                                    },
+                                    "creatorEmail": {
+                                        "index": 5,
+                                        "width": 150,
+                                        "id": "creatorEmail",
+                                        "horizontalAlignment": "LEFT",
+                                        "verticalAlignment": "CENTER",
+                                        "columnType": "text",
+                                        "textSize": "PARAGRAPH",
+                                        "enableFilter": true,
+                                        "enableSort": true,
+                                        "isVisible": true,
+                                        "isDisabled": false,
+                                        "isCellVisible": true,
+                                        "isDerived": false,
+                                        "label": "creatorEmail",
+                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.creatorEmail))}}"
+                                    },
+                                    "deteled": {
+                                        "index": 6,
+                                        "width": 150,
+                                        "id": "deteled",
+                                        "horizontalAlignment": "LEFT",
+                                        "verticalAlignment": "CENTER",
+                                        "columnType": "text",
+                                        "textSize": "PARAGRAPH",
+                                        "enableFilter": true,
+                                        "enableSort": true,
+                                        "isVisible": true,
+                                        "isDisabled": false,
+                                        "isCellVisible": true,
+                                        "isDerived": false,
+                                        "label": "deteled",
+                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.deteled))}}"
+                                    },
+                                    "contactIDs": {
+                                        "index": 7,
+                                        "width": 150,
+                                        "id": "contactIDs",
+                                        "horizontalAlignment": "LEFT",
+                                        "verticalAlignment": "CENTER",
+                                        "columnType": "text",
+                                        "textSize": "PARAGRAPH",
+                                        "enableFilter": true,
+                                        "enableSort": true,
+                                        "isVisible": true,
+                                        "isDisabled": false,
+                                        "isCellVisible": true,
+                                        "isDerived": false,
+                                        "label": "contactIDs",
+                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.contactIDs))}}"
+                                    },
+                                    "customColumn1": {
+                                        "index": 8,
+                                        "width": 150,
+                                        "id": "customColumn1",
+                                        "columnType": "iconButton",
+                                        "enableFilter": true,
+                                        "enableSort": true,
+                                        "isVisible": true,
+                                        "isDisabled": false,
+                                        "isCellVisible": true,
+                                        "isDerived": true,
+                                        "label": "view",
+                                        "computedValue": "",
+                                        "buttonStyle": "rgb(3, 179, 101)",
+                                        "buttonColor": "#03B365",
+                                        "menuColor": "#03B365",
+                                        "labelColor": "#FFFFFF",
+                                        "iconName": "eye-open",
+                                        "onClick": "{{navigateTo('List',{_id:contacts_table.selectedRow._id})}}"
+                                    }
+                                },
+                                "derivedColumns": {
+                                    "customColumn1": {
+                                        "index": 8,
+                                        "width": 150,
+                                        "id": "customColumn1",
+                                        "columnType": "iconButton",
+                                        "enableFilter": true,
+                                        "enableSort": true,
+                                        "isVisible": true,
+                                        "isDisabled": false,
+                                        "isCellVisible": true,
+                                        "isDerived": true,
+                                        "label": "view",
+                                        "computedValue": "",
+                                        "buttonStyle": "rgb(3, 179, 101)",
+                                        "buttonColor": "#03B365",
+                                        "menuColor": "#03B365",
+                                        "labelColor": "#FFFFFF",
+                                        "iconName": "eye-open"
+                                    }
+                                },
+                                "tableData": "{{getLists.data}}",
+                                "columnSizeMap": {
+                                    "task": 245,
+                                    "step": 62,
+                                    "status": 75
+                                },
+                                "columnOrder": [
+                                    "_id",
+                                    "name",
+                                    "description",
+                                    "creatorID",
+                                    "creatorName",
+                                    "creatorEmail",
+                                    "deteled",
+                                    "contactIDs",
+                                    "customColumn1"
+                                ],
+                                "enableClientSideSearch": true,
+                                "isVisibleSearch": true,
+                                "isVisibleFilters": true,
+                                "isVisibleDownload": true,
+                                "isVisiblePagination": true,
+                                "isSortable": true,
+                                "delimiter": ",",
+                                "version": 3,
+                                "type": "TABLE_WIDGET",
+                                "hideCard": false,
+                                "displayName": "Table",
+                                "key": "vksmqnz0ae",
+                                "iconSVG": "/static/media/icon.db8a9cbd.svg",
+                                "widgetId": "lipejnmywp",
+                                "renderMode": "CANVAS",
+                                "isLoading": false,
+                                "parentColumnSpace": 8.3125,
+                                "parentRowSpace": 10,
+                                "leftColumn": 8,
+                                "rightColumn": 58,
+                                "topRow": 16,
+                                "bottomRow": 63,
+                                "parentId": "0",
+                                "dynamicTriggerPathList": [
+                                    {
+                                        "key": "primaryColumns.customColumn1.onClick"
+                                    }
+                                ],
+                                "dynamicPropertyPathList": []
                             }
                         ],
                         "snapRows": 54,
@@ -15194,7 +15031,6 @@
                     "widgetNames": [
                         "MainContainer",
                         "create_list",
-                        "lists_table",
                         "list_modal",
                         "Canvas22",
                         "IconButton2",
@@ -15203,7 +15039,8 @@
                         "create_list_btn",
                         "list_name",
                         "list_description",
-                        "Select1"
+                        "Select1",
+                        "Table1"
                     ],
                     "deleted": false,
                     "policies": [],
@@ -15237,6 +15074,336 @@
         },
         "createdAt": "2024-04-16T20:46:13.978Z",
         "updatedAt": "2024-04-16T20:46:13.978Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:pages",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:pages",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "662ace433dfdeb2c3d9d2c3a",
+        "applicationId": "jetsondashboard",
+        "slug": "List",
+        "Page": {
+            "name": "List",
+            "layouts": [
+                {
+                    "_id": "662ace433dfdeb2c3d9d2c3b",
+                    "viewMode": false,
+                    "dsl": {
+                        "widgetName": "MainContainer",
+                        "backgroundColor": "none",
+                        "rightColumn": 1224,
+                        "snapColumns": 64,
+                        "widgetId": "0",
+                        "topRow": 0,
+                        "bottomRow": 550,
+                        "parentRowSpace": 1,
+                        "type": "CANVAS_WIDGET",
+                        "detachFromLayout": true,
+                        "minHeight": 560,
+                        "dynamicBindingPathList": [],
+                        "parentColumnSpace": 1,
+                        "leftColumn": 0,
+                        "children": [],
+                        "snapRows": 55,
+                        "containerStyle": "none",
+                        "canExtend": true,
+                        "version": 57
+                    },
+                    "widgetNames": [
+                        "MainContainer"
+                    ],
+                    "deleted": false,
+                    "policies": [],
+                    "layoutOnLoadActions": [
+                        []
+                    ],
+                    "layoutOnCloseActions": [
+                        []
+                    ]
+                }
+            ]
+        },
+        "createdAt": "2024-04-25T21:42:27.954Z",
+        "updatedAt": "2024-04-25T21:42:27.954Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:pages",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:pages",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "662acebd3dfdeb2c3d9d2c3c",
+        "applicationId": "jetsondashboard",
+        "slug": "Deals",
+        "Page": {
+            "name": "Deals",
+            "layouts": [
+                {
+                    "_id": "662acebd3dfdeb2c3d9d2c3d",
+                    "viewMode": false,
+                    "dsl": {
+                        "widgetName": "MainContainer",
+                        "backgroundColor": "none",
+                        "rightColumn": 1224,
+                        "snapColumns": 64,
+                        "widgetId": "0",
+                        "topRow": 0,
+                        "bottomRow": 1390,
+                        "parentRowSpace": 1,
+                        "type": "CANVAS_WIDGET",
+                        "detachFromLayout": true,
+                        "minHeight": 560,
+                        "dynamicBindingPathList": [],
+                        "parentColumnSpace": 1,
+                        "leftColumn": 0,
+                        "children": [
+                            {
+                                "isVisible": true,
+                                "animateLoading": true,
+                                "defaultSelectedRow": "0",
+                                "label": "Data",
+                                "widgetName": "Table1",
+                                "searchKey": "",
+                                "textSize": "PARAGRAPH",
+                                "horizontalAlignment": "LEFT",
+                                "verticalAlignment": "CENTER",
+                                "totalRecordsCount": 0,
+                                "defaultPageSize": 0,
+                                "isShowLoading": true,
+                                "dynamicBindingPathList": [
+                                    {
+                                        "key": "primaryColumns.step.computedValue"
+                                    },
+                                    {
+                                        "key": "primaryColumns.task.computedValue"
+                                    },
+                                    {
+                                        "key": "primaryColumns.status.computedValue"
+                                    },
+                                    {
+                                        "key": "primaryColumns.action.computedValue"
+                                    }
+                                ],
+                                "primaryColumns": {
+                                    "step": {
+                                        "index": 0,
+                                        "width": 150,
+                                        "id": "step",
+                                        "horizontalAlignment": "LEFT",
+                                        "verticalAlignment": "CENTER",
+                                        "columnType": "text",
+                                        "textSize": "PARAGRAPH",
+                                        "enableFilter": true,
+                                        "enableSort": true,
+                                        "isVisible": true,
+                                        "isCellVisible": true,
+                                        "isDerived": false,
+                                        "label": "step",
+                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.step))}}",
+                                        "buttonColor": "#03B365",
+                                        "menuColor": "#03B365",
+                                        "labelColor": "#FFFFFF"
+                                    },
+                                    "task": {
+                                        "index": 1,
+                                        "width": 150,
+                                        "id": "task",
+                                        "horizontalAlignment": "LEFT",
+                                        "verticalAlignment": "CENTER",
+                                        "columnType": "text",
+                                        "textSize": "PARAGRAPH",
+                                        "enableFilter": true,
+                                        "enableSort": true,
+                                        "isVisible": true,
+                                        "isCellVisible": true,
+                                        "isDerived": false,
+                                        "label": "task",
+                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.task))}}",
+                                        "buttonColor": "#03B365",
+                                        "menuColor": "#03B365",
+                                        "labelColor": "#FFFFFF"
+                                    },
+                                    "status": {
+                                        "index": 2,
+                                        "width": 150,
+                                        "id": "status",
+                                        "horizontalAlignment": "LEFT",
+                                        "verticalAlignment": "CENTER",
+                                        "columnType": "text",
+                                        "textSize": "PARAGRAPH",
+                                        "enableFilter": true,
+                                        "enableSort": true,
+                                        "isVisible": true,
+                                        "isCellVisible": true,
+                                        "isDerived": false,
+                                        "label": "status",
+                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.status))}}",
+                                        "buttonColor": "#03B365",
+                                        "menuColor": "#03B365",
+                                        "labelColor": "#FFFFFF"
+                                    },
+                                    "action": {
+                                        "index": 3,
+                                        "width": 150,
+                                        "id": "action",
+                                        "horizontalAlignment": "LEFT",
+                                        "verticalAlignment": "CENTER",
+                                        "columnType": "button",
+                                        "textSize": "PARAGRAPH",
+                                        "enableFilter": true,
+                                        "enableSort": true,
+                                        "isVisible": true,
+                                        "isCellVisible": true,
+                                        "isDisabled": false,
+                                        "isDerived": false,
+                                        "label": "action",
+                                        "onClick": "{{currentRow.step === '#1' ? showAlert('Done', 'success') : currentRow.step === '#2' ? navigateTo('https://docs.appsmith.com/core-concepts/connecting-to-data-sources/querying-a-database',undefined,'NEW_WINDOW') : navigateTo('https://docs.appsmith.com/core-concepts/displaying-data-read/display-data-tables',undefined,'NEW_WINDOW')}}",
+                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.action))}}",
+                                        "buttonColor": "#03B365",
+                                        "menuColor": "#03B365",
+                                        "labelColor": "#FFFFFF"
+                                    }
+                                },
+                                "derivedColumns": {},
+                                "tableData": "[\n  {\n    \"step\": \"#1\",\n    \"task\": \"Drop a table\",\n    \"status\": \"✅\",\n    \"action\": \"\"\n  },\n  {\n    \"step\": \"#2\",\n    \"task\": \"Create a query fetch_users with the Mock DB\",\n    \"status\": \"--\",\n    \"action\": \"\"\n  },\n  {\n    \"step\": \"#3\",\n    \"task\": \"Bind the query using => fetch_users.data\",\n    \"status\": \"--\",\n    \"action\": \"\"\n  }\n]",
+                                "columnSizeMap": {
+                                    "task": 245,
+                                    "step": 62,
+                                    "status": 75
+                                },
+                                "columnOrder": [
+                                    "step",
+                                    "task",
+                                    "status",
+                                    "action"
+                                ],
+                                "enableClientSideSearch": true,
+                                "isVisibleSearch": true,
+                                "isVisibleFilters": true,
+                                "isVisibleDownload": true,
+                                "isVisiblePagination": true,
+                                "isSortable": true,
+                                "delimiter": ",",
+                                "version": 3,
+                                "type": "TABLE_WIDGET",
+                                "hideCard": false,
+                                "displayName": "Table",
+                                "key": "pt712coa1c",
+                                "iconSVG": "/static/media/icon.db8a9cbd.svg",
+                                "widgetId": "x4rfyzr34s",
+                                "renderMode": "CANVAS",
+                                "isLoading": false,
+                                "parentColumnSpace": 8.3125,
+                                "parentRowSpace": 10,
+                                "leftColumn": 7,
+                                "rightColumn": 63,
+                                "topRow": 19,
+                                "bottomRow": 47,
+                                "parentId": "0",
+                                "dynamicTriggerPathList": []
+                            }
+                        ],
+                        "snapRows": 55,
+                        "containerStyle": "none",
+                        "canExtend": true,
+                        "version": 57
+                    },
+                    "widgetNames": [
+                        "MainContainer",
+                        "Table1"
+                    ],
+                    "deleted": false,
+                    "policies": [],
+                    "layoutOnLoadActions": [
+                        []
+                    ],
+                    "layoutOnCloseActions": [
+                        []
+                    ]
+                }
+            ]
+        },
+        "createdAt": "2024-04-25T21:44:29.477Z",
+        "updatedAt": "2024-04-25T21:44:29.477Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:pages",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:pages",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "662acec83dfdeb2c3d9d2c3e",
+        "applicationId": "jetsondashboard",
+        "slug": "Deal",
+        "Page": {
+            "name": "Deal",
+            "layouts": [
+                {
+                    "_id": "662acec83dfdeb2c3d9d2c3f",
+                    "viewMode": false,
+                    "dsl": {
+                        "widgetName": "MainContainer",
+                        "backgroundColor": "none",
+                        "rightColumn": 1224,
+                        "snapColumns": 64,
+                        "widgetId": "0",
+                        "topRow": 0,
+                        "bottomRow": 550,
+                        "parentRowSpace": 1,
+                        "type": "CANVAS_WIDGET",
+                        "detachFromLayout": true,
+                        "minHeight": 560,
+                        "dynamicBindingPathList": [],
+                        "parentColumnSpace": 1,
+                        "leftColumn": 0,
+                        "children": [],
+                        "snapRows": 55,
+                        "containerStyle": "none",
+                        "canExtend": true,
+                        "version": 57
+                    },
+                    "widgetNames": [
+                        "MainContainer"
+                    ],
+                    "deleted": false,
+                    "policies": [],
+                    "layoutOnLoadActions": [
+                        []
+                    ],
+                    "layoutOnCloseActions": [
+                        []
+                    ]
+                }
+            ]
+        },
+        "createdAt": "2024-04-25T21:44:40.678Z",
+        "updatedAt": "2024-04-25T21:44:40.678Z",
         "deleted": false,
         "policies": [
             {

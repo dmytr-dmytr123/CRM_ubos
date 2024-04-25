@@ -60,6 +60,18 @@
         {
             "_id": "Lists",
             "isDefault": false
+        },
+        {
+            "_id": "List",
+            "isDefault": false
+        },
+        {
+            "_id": "Deals",
+            "isDefault": false
+        },
+        {
+            "_id": "Deal",
+            "isDefault": false
         }
     ],
     "policies": [

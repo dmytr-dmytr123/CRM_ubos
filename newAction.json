@@ -8870,7 +8870,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-29T10:31:36.095Z",
-        "updatedAt": "2024-04-16T20:17:35.808Z",
+        "updatedAt": "2024-04-25T20:09:13.548Z",
         "deleted": false,
         "policies": [
             {
@@ -9005,7 +9005,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-03-29T10:32:33.947Z",
-        "updatedAt": "2024-04-25T19:58:50.411Z",
+        "updatedAt": "2024-04-25T20:09:17.443Z",
         "deleted": false,
         "policies": [
             {
@@ -9524,7 +9524,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-04-16T19:52:00.022Z",
-        "updatedAt": "2024-04-25T19:58:37.878Z",
+        "updatedAt": "2024-04-25T20:09:15.769Z",
         "deleted": false,
         "policies": [
             {
@@ -9715,7 +9715,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-04-16T20:48:21.826Z",
-        "updatedAt": "2024-04-25T20:01:32.845Z",
+        "updatedAt": "2024-04-25T21:36:52.575Z",
         "deleted": false,
         "policies": [
             {
@@ -9742,7 +9742,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "Action": {
-            "name": "createList",
+            "name": "newList",
             "datasource": {
                 "datasourceConfiguration": {
                     "url": "https://auth-nr-6495-65fc1869116ca212000000d2.ubos.tech",
@@ -9839,13 +9839,13 @@
                 "JSON.stringify(list_name.text)",
                 "JSON.stringify(list_description.text)",
                 "JSON.stringify(main.user.auth_module.user.info.user._id)",
-                "JSON.stringify(list_name.text),2024-04-16T20:52:33.381Z,2024-04-25T19:58:23.194Z,read:actions,manage:actions,execute:actions,https://auth-nr-6495-65fc1869116ca212000000d2.ubos.tech,65fc18a64c7c2d1100000013,Unified Authorization Template,65fc18b24c7c2d1100000015,auth-nr-6495,api,Org,API,manage:service,read:service,auth-nr-6495,latest,https://auth-nr-6495-65fc1869116ca212000000d2.ubos.tech,auth-nr-6495-ubos-th457-auth-nr-6495,65fc186a116ca212000000d3,nodeUrl,https://auth-nr-6495-65fc1869116ca212000000d2.ubos.tech,uiUrl,https://auth-ui-5924-65fc1869116ca212000000d2.ubos.tech,AUTHDB-MONGO-HOST-NAME,authdb-6984-ubos-th457-authdb-6984.ubos-th457,AUTHDB-MONGO-DB-NAME,authdb-6984,AUTHDB-MONGO-USER-NAME,ddmytrodubina2697,AUTHDB-MONGO-PASSWORD,veQkrILu,ready,Lists,POST,content-type,application/json,{\n\t\"name\":{{JSON.stringify(list_name.text),2024-04-16T20:52:33.381Z,2024-04-25T19:59:26.395Z,read:actions,manage:actions,execute:actions,https://auth-nr-6495-65fc1869116ca212000000d2.ubos.tech,65fc18a64c7c2d1100000013,Unified Authorization Template,65fc18b24c7c2d1100000015,auth-nr-6495,api,Org,API,manage:service,read:service,auth-nr-6495,latest,https://auth-nr-6495-65fc1869116ca212000000d2.ubos.tech,auth-nr-6495-ubos-th457-auth-nr-6495,65fc186a116ca212000000d3,nodeUrl,https://auth-nr-6495-65fc1869116ca212000000d2.ubos.tech,uiUrl,https://auth-ui-5924-65fc1869116ca212000000d2.ubos.tech,AUTHDB-MONGO-HOST-NAME,authdb-6984-ubos-th457-authdb-6984.ubos-th457,AUTHDB-MONGO-DB-NAME,authdb-6984,AUTHDB-MONGO-USER-NAME,ddmytrodubina2697,AUTHDB-MONGO-PASSWORD,veQkrILu,ready,Lists,POST,content-type,application/json,{\n\t\"name\":{{JSON.stringify(list_name.text)"
+                "JSON.stringify(list_name.text),2024-04-16T20:52:33.381Z,2024-04-25T20:16:38.222Z,read:actions,manage:actions,execute:actions,https://auth-nr-6495-65fc1869116ca212000000d2.ubos.tech,65fc18a64c7c2d1100000013,Unified Authorization Template,65fc18b24c7c2d1100000015,auth-nr-6495,api,Org,API,manage:service,read:service,auth-nr-6495,latest,https://auth-nr-6495-65fc1869116ca212000000d2.ubos.tech,auth-nr-6495-ubos-th457-auth-nr-6495,65fc186a116ca212000000d3,nodeUrl,https://auth-nr-6495-65fc1869116ca212000000d2.ubos.tech,uiUrl,https://auth-ui-5924-65fc1869116ca212000000d2.ubos.tech,AUTHDB-MONGO-HOST-NAME,authdb-6984-ubos-th457-authdb-6984.ubos-th457,AUTHDB-MONGO-DB-NAME,authdb-6984,AUTHDB-MONGO-USER-NAME,ddmytrodubina2697,AUTHDB-MONGO-PASSWORD,veQkrILu,ready,Lists,POST,content-type,application/json,{\n\t\"name\":{{JSON.stringify(list_name.text),2024-04-16T20:52:33.381Z,2024-04-25T20:16:41.921Z,read:actions,manage:actions,execute:actions,https://auth-nr-6495-65fc1869116ca212000000d2.ubos.tech,65fc18a64c7c2d1100000013,Unified Authorization Template,65fc18b24c7c2d1100000015,auth-nr-6495,api,Org,API,manage:service,read:service,auth-nr-6495,latest,https://auth-nr-6495-65fc1869116ca212000000d2.ubos.tech,auth-nr-6495-ubos-th457-auth-nr-6495,65fc186a116ca212000000d3,nodeUrl,https://auth-nr-6495-65fc1869116ca212000000d2.ubos.tech,uiUrl,https://auth-ui-5924-65fc1869116ca212000000d2.ubos.tech,AUTHDB-MONGO-HOST-NAME,authdb-6984-ubos-th457-authdb-6984.ubos-th457,AUTHDB-MONGO-DB-NAME,authdb-6984,AUTHDB-MONGO-USER-NAME,ddmytrodubina2697,AUTHDB-MONGO-PASSWORD,veQkrILu,ready,Lists,POST,content-type,application/json,{\n\t\"name\":{{JSON.stringify(list_name.text)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-04-16T20:52:33.381Z",
-        "updatedAt": "2024-04-25T20:04:55.616Z",
+        "updatedAt": "2024-04-25T20:49:06.049Z",
         "deleted": false,
         "policies": [
             {
@@ -10041,7 +10041,136 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-04-25T19:57:29.671Z",
-        "updatedAt": "2024-04-25T20:03:40.483Z",
+        "updatedAt": "2024-04-25T20:49:08.528Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "662aba403dfdeb2c3d9d2c39",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "createNewList",
+            "datasource": {
+                "datasourceConfiguration": {
+                    "url": "https://auth-nr-6495-65fc1869116ca212000000d2.ubos.tech",
+                    "templateData": {
+                        "cloneTemplateSessionId": "65fc18a64c7c2d1100000013",
+                        "numberOfServices": 3,
+                        "isPromotionalTemplate": false,
+                        "templateName": "Unified Authorization Template"
+                    }
+                },
+                "id": "65fc18b24c7c2d1100000015",
+                "invalids": [],
+                "isValid": true,
+                "name": "auth-nr-6495",
+                "new": false,
+                "type": "api",
+                "organizationId": "Org",
+                "pluginId": "API",
+                "userPermissions": [
+                    "manage:service",
+                    "read:service"
+                ],
+                "settings_data": {
+                    "gitName": "",
+                    "projectName": "auth-nr-6495",
+                    "systemType": "latest",
+                    "gitUrl": "",
+                    "gitPassword": "",
+                    "urlNodeRed": "https://auth-nr-6495-65fc1869116ca212000000d2.ubos.tech",
+                    "serviceId": "auth-nr-6495-ubos-th457-auth-nr-6495",
+                    "applicationId": "65fc186a116ca212000000d3",
+                    "env": [
+                        {
+                            "name": "nodeUrl",
+                            "value": "https://auth-nr-6495-65fc1869116ca212000000d2.ubos.tech"
+                        },
+                        {
+                            "name": "uiUrl",
+                            "value": "https://auth-ui-5924-65fc1869116ca212000000d2.ubos.tech"
+                        },
+                        {
+                            "name": "AUTHDB-MONGO-HOST-NAME",
+                            "value": "authdb-6984-ubos-th457-authdb-6984.ubos-th457"
+                        },
+                        {
+                            "name": "AUTHDB-MONGO-DB-NAME",
+                            "value": "authdb-6984"
+                        },
+                        {
+                            "name": "AUTHDB-MONGO-USER-NAME",
+                            "value": "ddmytrodubina2697"
+                        },
+                        {
+                            "name": "AUTHDB-MONGO-PASSWORD",
+                            "value": "veQkrILu"
+                        }
+                    ],
+                    "status": "ready"
+                }
+            },
+            "executeOnLoad": false,
+            "pageId": "Lists",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "application/json"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "path": "/newList",
+                "body": "{\n\t\"name\":{{JSON.stringify(list_name.text)}},\n\t\"description\":{{JSON.stringify(list_description.text)}},\n\t\"listCreatorID\": {{JSON.stringify(main.user.auth_module.user.info.user._id)}}\n}"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "JSON.stringify(list_name.text)",
+                "JSON.stringify(list_description.text)",
+                "JSON.stringify(main.user.auth_module.user.info.user._id)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-04-25T20:17:04.805Z",
+        "updatedAt": "2024-04-25T21:36:55.636Z",
         "deleted": false,
         "policies": [
             {
