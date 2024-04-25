@@ -12247,6 +12247,9 @@
                                     },
                                     {
                                         "key": "primaryColumns.deleted.computedValue"
+                                    },
+                                    {
+                                        "key": "derivedColumns.customColumn2.computedValue"
                                     }
                                 ],
                                 "primaryColumns": {
@@ -12525,7 +12528,7 @@
                                         "isCellVisible": true,
                                         "isDerived": true,
                                         "label": "contact owner email",
-                                        "computedValue": "",
+                                        "computedValue": "{{contacts_table.sanitizedTableData.map((currentRow) => ( main.user.auth_module.user.info.user._id))}}",
                                         "buttonStyle": "rgb(3, 179, 101)",
                                         "buttonColor": "#03B365",
                                         "menuColor": "#03B365",
@@ -12659,7 +12662,7 @@
                                 ],
                                 "borderRadius": "ROUNDED",
                                 "dynamicPropertyPathList": [],
-                                "onClick": "{{showModal('ModalAddToList')}}"
+                                "onClick": "{{showModal('modal_addtolist')}}"
                             },
                             {
                                 "isVisible": true,
@@ -13215,7 +13218,7 @@
                                 "detachFromLayout": true,
                                 "canOutsideClickClose": true,
                                 "shouldScrollContents": true,
-                                "widgetName": "ModalAddToList",
+                                "widgetName": "modal_addtolist",
                                 "children": [
                                     {
                                         "isVisible": true,
@@ -13380,7 +13383,7 @@
                                 "labelPosition": "Left",
                                 "labelAlignment": "left",
                                 "labelWidth": 5,
-                                "options": "",
+                                "options": "{{GetOwners.data}}",
                                 "serverSideFiltering": false,
                                 "widgetName": "Select1",
                                 "defaultOptionValue": "{{main.user.auth_module.user.info.user._id}}",
@@ -13399,17 +13402,25 @@
                                 "isLoading": false,
                                 "parentColumnSpace": 8.3125,
                                 "parentRowSpace": 10,
-                                "leftColumn": 7,
-                                "rightColumn": 14,
+                                "leftColumn": 8,
+                                "rightColumn": 25,
                                 "topRow": 16,
                                 "bottomRow": 20,
                                 "parentId": "0",
                                 "dynamicBindingPathList": [
                                     {
+                                        "key": "options"
+                                    },
+                                    {
                                         "key": "defaultOptionValue"
                                     }
                                 ],
-                                "dynamicTriggerPathList": []
+                                "dynamicTriggerPathList": [
+                                    {
+                                        "key": "onOptionChange"
+                                    }
+                                ],
+                                "onOptionChange": "{{getContacts.run()}}"
                             },
                             {
                                 "isVisible": true,
@@ -13450,8 +13461,8 @@
                                 "isLoading": false,
                                 "parentColumnSpace": 8.3125,
                                 "parentRowSpace": 10,
-                                "leftColumn": 19,
-                                "rightColumn": 28,
+                                "leftColumn": 27,
+                                "rightColumn": 39,
                                 "topRow": 16,
                                 "bottomRow": 20,
                                 "parentId": "0"
@@ -13495,8 +13506,8 @@
                                 "isLoading": false,
                                 "parentColumnSpace": 8.3125,
                                 "parentRowSpace": 10,
-                                "leftColumn": 34,
-                                "rightColumn": 43,
+                                "leftColumn": 39,
+                                "rightColumn": 48,
                                 "topRow": 16,
                                 "bottomRow": 20,
                                 "parentId": "0"
@@ -13527,7 +13538,7 @@
                         "country_contact",
                         "industry_contact",
                         "city_contact",
-                        "ModalAddToList",
+                        "modal_addtolist",
                         "Canvas23",
                         "IconButton3",
                         "Text13",
@@ -13548,6 +13559,27 @@
                                 "name": "getContacts",
                                 "pluginType": "API",
                                 "jsonPathKeys": [],
+                                "timeoutInMillisecond": 10000
+                            },
+                            {
+                                "_id": "661ed6e011d6021f9a0b628f",
+                                "id": "661ed6e011d6021f9a0b628f",
+                                "confirmBeforeExecute": false,
+                                "name": "Api1",
+                                "pluginType": "API",
+                                "jsonPathKeys": [],
+                                "timeoutInMillisecond": 10000
+                            },
+                            {
+                                "_id": "661ed91d11d6021f9a0b6292",
+                                "id": "661ed91d11d6021f9a0b6292",
+                                "collectionId": "661ed91d11d6021f9a0b6290",
+                                "confirmBeforeExecute": false,
+                                "name": "myFun2",
+                                "pluginType": "JS",
+                                "jsonPathKeys": [
+                                    "async () => {\n\t\t//use async-await or promises\n\t}"
+                                ],
                                 "timeoutInMillisecond": 10000
                             }
                         ]
@@ -14348,6 +14380,863 @@
         },
         "createdAt": "2024-03-29T10:52:46.751Z",
         "updatedAt": "2024-03-29T10:52:46.751Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:pages",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:pages",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "661ee39511d6021f9a0b6293",
+        "applicationId": "jetsondashboard",
+        "slug": "Lists",
+        "Page": {
+            "name": "Lists",
+            "layouts": [
+                {
+                    "_id": "661ee39511d6021f9a0b6294",
+                    "viewMode": false,
+                    "dsl": {
+                        "widgetName": "MainContainer",
+                        "backgroundColor": "none",
+                        "rightColumn": 1224,
+                        "snapColumns": 64,
+                        "widgetId": "0",
+                        "topRow": 0,
+                        "bottomRow": 1390,
+                        "parentRowSpace": 1,
+                        "type": "CANVAS_WIDGET",
+                        "detachFromLayout": true,
+                        "minHeight": 550,
+                        "dynamicBindingPathList": [],
+                        "parentColumnSpace": 1,
+                        "leftColumn": 0,
+                        "children": [
+                            {
+                                "isVisible": true,
+                                "animateLoading": true,
+                                "text": "Create List",
+                                "buttonColor": "#FFFFFF",
+                                "buttonVariant": "PRIMARY",
+                                "placement": "CENTER",
+                                "widgetName": "create_list",
+                                "isDisabled": false,
+                                "isDefaultClickDisabled": true,
+                                "recaptchaType": "V3",
+                                "version": 1,
+                                "classStyle": "",
+                                "type": "BUTTON_WIDGET",
+                                "hideCard": false,
+                                "displayName": "Button",
+                                "key": "8yygtejavd",
+                                "iconSVG": "/static/media/icon.cca02633.svg",
+                                "widgetId": "v65h37bbey",
+                                "renderMode": "CANVAS",
+                                "isLoading": false,
+                                "parentColumnSpace": 10.34375,
+                                "parentRowSpace": 10,
+                                "leftColumn": 50,
+                                "rightColumn": 63,
+                                "topRow": 7,
+                                "bottomRow": 11,
+                                "parentId": "0",
+                                "dynamicBindingPathList": [],
+                                "dynamicTriggerPathList": [
+                                    {
+                                        "key": "onClick"
+                                    }
+                                ],
+                                "borderRadius": "ROUNDED",
+                                "boxShadow": "NONE",
+                                "onClick": "{{showModal('list_modal')}}"
+                            },
+                            {
+                                "isVisible": true,
+                                "animateLoading": true,
+                                "defaultSelectedRow": "0",
+                                "label": "Data",
+                                "widgetName": "lists_table",
+                                "searchKey": "",
+                                "textSize": "PARAGRAPH",
+                                "horizontalAlignment": "LEFT",
+                                "verticalAlignment": "CENTER",
+                                "totalRecordsCount": 0,
+                                "defaultPageSize": 0,
+                                "isShowLoading": true,
+                                "dynamicBindingPathList": [
+                                    {
+                                        "key": "tableData"
+                                    },
+                                    {
+                                        "key": "primaryColumns._id.computedValue"
+                                    },
+                                    {
+                                        "key": "primaryColumns.name.computedValue"
+                                    },
+                                    {
+                                        "key": "primaryColumns.email.computedValue"
+                                    },
+                                    {
+                                        "key": "primaryColumns.phone.computedValue"
+                                    },
+                                    {
+                                        "key": "primaryColumns.leadstatus.computedValue"
+                                    },
+                                    {
+                                        "key": "primaryColumns.comment.computedValue"
+                                    },
+                                    {
+                                        "key": "primaryColumns.owner.computedValue"
+                                    },
+                                    {
+                                        "key": "primaryColumns.country.computedValue"
+                                    },
+                                    {
+                                        "key": "primaryColumns.city.computedValue"
+                                    },
+                                    {
+                                        "key": "primaryColumns.industry.computedValue"
+                                    },
+                                    {
+                                        "key": "primaryColumns.createDate.computedValue"
+                                    },
+                                    {
+                                        "key": "primaryColumns.deleted.computedValue"
+                                    },
+                                    {
+                                        "key": "derivedColumns.customColumn2.computedValue"
+                                    }
+                                ],
+                                "primaryColumns": {
+                                    "customColumn2": {
+                                        "index": 5,
+                                        "width": 150,
+                                        "id": "customColumn2",
+                                        "columnType": "text",
+                                        "enableFilter": true,
+                                        "enableSort": true,
+                                        "isVisible": true,
+                                        "isDisabled": false,
+                                        "isCellVisible": true,
+                                        "isDerived": true,
+                                        "label": "contact owner email",
+                                        "computedValue": "",
+                                        "buttonStyle": "rgb(3, 179, 101)",
+                                        "buttonColor": "#03B365",
+                                        "menuColor": "#03B365",
+                                        "labelColor": "#FFFFFF"
+                                    },
+                                    "customColumn3": {
+                                        "index": 6,
+                                        "width": 150,
+                                        "id": "customColumn3",
+                                        "columnType": "text",
+                                        "enableFilter": true,
+                                        "enableSort": true,
+                                        "isVisible": true,
+                                        "isDisabled": false,
+                                        "isCellVisible": true,
+                                        "isDerived": true,
+                                        "label": "created at",
+                                        "computedValue": "",
+                                        "buttonStyle": "rgb(3, 179, 101)",
+                                        "buttonColor": "#03B365",
+                                        "menuColor": "#03B365",
+                                        "labelColor": "#FFFFFF"
+                                    },
+                                    "customColumn7": {
+                                        "index": 10,
+                                        "width": 150,
+                                        "id": "customColumn7",
+                                        "columnType": "iconButton",
+                                        "enableFilter": true,
+                                        "enableSort": true,
+                                        "isVisible": true,
+                                        "isDisabled": false,
+                                        "isCellVisible": true,
+                                        "isDerived": true,
+                                        "label": "view",
+                                        "computedValue": "",
+                                        "buttonStyle": "rgb(3, 179, 101)",
+                                        "buttonColor": "#2E3D49",
+                                        "menuColor": "#03B365",
+                                        "labelColor": "#FFFFFF",
+                                        "iconName": "eye-open",
+                                        "borderRadius": "CIRCLE",
+                                        "onClick": "{{navigateTo('Contact',{_id:contacts_table.selectedRow._id})}}"
+                                    },
+                                    "_id": {
+                                        "index": 0,
+                                        "width": 150,
+                                        "id": "_id",
+                                        "horizontalAlignment": "LEFT",
+                                        "verticalAlignment": "CENTER",
+                                        "columnType": "text",
+                                        "textSize": "PARAGRAPH",
+                                        "enableFilter": true,
+                                        "enableSort": true,
+                                        "isVisible": true,
+                                        "isDisabled": false,
+                                        "isCellVisible": true,
+                                        "isDerived": false,
+                                        "label": "_id",
+                                        "computedValue": "{{contacts_table.sanitizedTableData.map((currentRow) => ( currentRow._id))}}"
+                                    },
+                                    "name": {
+                                        "index": 1,
+                                        "width": 150,
+                                        "id": "name",
+                                        "horizontalAlignment": "LEFT",
+                                        "verticalAlignment": "CENTER",
+                                        "columnType": "text",
+                                        "textSize": "PARAGRAPH",
+                                        "enableFilter": true,
+                                        "enableSort": true,
+                                        "isVisible": true,
+                                        "isDisabled": false,
+                                        "isCellVisible": true,
+                                        "isDerived": false,
+                                        "label": "name",
+                                        "computedValue": "{{contacts_table.sanitizedTableData.map((currentRow) => ( currentRow.name))}}"
+                                    },
+                                    "email": {
+                                        "index": 2,
+                                        "width": 150,
+                                        "id": "email",
+                                        "horizontalAlignment": "LEFT",
+                                        "verticalAlignment": "CENTER",
+                                        "columnType": "text",
+                                        "textSize": "PARAGRAPH",
+                                        "enableFilter": true,
+                                        "enableSort": true,
+                                        "isVisible": true,
+                                        "isDisabled": false,
+                                        "isCellVisible": true,
+                                        "isDerived": false,
+                                        "label": "email",
+                                        "computedValue": "{{contacts_table.sanitizedTableData.map((currentRow) => ( currentRow.email))}}"
+                                    },
+                                    "phone": {
+                                        "index": 3,
+                                        "width": 150,
+                                        "id": "phone",
+                                        "horizontalAlignment": "LEFT",
+                                        "verticalAlignment": "CENTER",
+                                        "columnType": "text",
+                                        "textSize": "PARAGRAPH",
+                                        "enableFilter": true,
+                                        "enableSort": true,
+                                        "isVisible": true,
+                                        "isDisabled": false,
+                                        "isCellVisible": true,
+                                        "isDerived": false,
+                                        "label": "phone",
+                                        "computedValue": "{{contacts_table.sanitizedTableData.map((currentRow) => ( currentRow.phone))}}"
+                                    },
+                                    "leadstatus": {
+                                        "index": 4,
+                                        "width": 150,
+                                        "id": "leadstatus",
+                                        "horizontalAlignment": "LEFT",
+                                        "verticalAlignment": "CENTER",
+                                        "columnType": "text",
+                                        "textSize": "PARAGRAPH",
+                                        "enableFilter": true,
+                                        "enableSort": true,
+                                        "isVisible": true,
+                                        "isDisabled": false,
+                                        "isCellVisible": true,
+                                        "isDerived": false,
+                                        "label": "leadstatus",
+                                        "computedValue": "{{contacts_table.sanitizedTableData.map((currentRow) => ( currentRow.leadstatus))}}"
+                                    },
+                                    "comment": {
+                                        "index": 5,
+                                        "width": 150,
+                                        "id": "comment",
+                                        "horizontalAlignment": "LEFT",
+                                        "verticalAlignment": "CENTER",
+                                        "columnType": "text",
+                                        "textSize": "PARAGRAPH",
+                                        "enableFilter": true,
+                                        "enableSort": true,
+                                        "isVisible": true,
+                                        "isDisabled": false,
+                                        "isCellVisible": true,
+                                        "isDerived": false,
+                                        "label": "comment",
+                                        "computedValue": "{{contacts_table.sanitizedTableData.map((currentRow) => ( currentRow.comment))}}"
+                                    },
+                                    "owner": {
+                                        "index": 6,
+                                        "width": 150,
+                                        "id": "owner",
+                                        "horizontalAlignment": "LEFT",
+                                        "verticalAlignment": "CENTER",
+                                        "columnType": "text",
+                                        "textSize": "PARAGRAPH",
+                                        "enableFilter": true,
+                                        "enableSort": true,
+                                        "isVisible": true,
+                                        "isDisabled": false,
+                                        "isCellVisible": true,
+                                        "isDerived": false,
+                                        "label": "owner",
+                                        "computedValue": "{{contacts_table.sanitizedTableData.map((currentRow) => ( currentRow.owner))}}"
+                                    },
+                                    "country": {
+                                        "index": 7,
+                                        "width": 150,
+                                        "id": "country",
+                                        "horizontalAlignment": "LEFT",
+                                        "verticalAlignment": "CENTER",
+                                        "columnType": "text",
+                                        "textSize": "PARAGRAPH",
+                                        "enableFilter": true,
+                                        "enableSort": true,
+                                        "isVisible": true,
+                                        "isDisabled": false,
+                                        "isCellVisible": true,
+                                        "isDerived": false,
+                                        "label": "country",
+                                        "computedValue": "{{contacts_table.sanitizedTableData.map((currentRow) => ( currentRow.country))}}"
+                                    },
+                                    "city": {
+                                        "index": 8,
+                                        "width": 150,
+                                        "id": "city",
+                                        "horizontalAlignment": "LEFT",
+                                        "verticalAlignment": "CENTER",
+                                        "columnType": "text",
+                                        "textSize": "PARAGRAPH",
+                                        "enableFilter": true,
+                                        "enableSort": true,
+                                        "isVisible": true,
+                                        "isDisabled": false,
+                                        "isCellVisible": true,
+                                        "isDerived": false,
+                                        "label": "city",
+                                        "computedValue": "{{contacts_table.sanitizedTableData.map((currentRow) => ( currentRow.city))}}"
+                                    },
+                                    "industry": {
+                                        "index": 9,
+                                        "width": 150,
+                                        "id": "industry",
+                                        "horizontalAlignment": "LEFT",
+                                        "verticalAlignment": "CENTER",
+                                        "columnType": "text",
+                                        "textSize": "PARAGRAPH",
+                                        "enableFilter": true,
+                                        "enableSort": true,
+                                        "isVisible": true,
+                                        "isDisabled": false,
+                                        "isCellVisible": true,
+                                        "isDerived": false,
+                                        "label": "industry",
+                                        "computedValue": "{{contacts_table.sanitizedTableData.map((currentRow) => ( currentRow.industry))}}"
+                                    },
+                                    "createDate": {
+                                        "index": 10,
+                                        "width": 150,
+                                        "id": "createDate",
+                                        "horizontalAlignment": "LEFT",
+                                        "verticalAlignment": "CENTER",
+                                        "columnType": "text",
+                                        "textSize": "PARAGRAPH",
+                                        "enableFilter": true,
+                                        "enableSort": true,
+                                        "isVisible": true,
+                                        "isDisabled": false,
+                                        "isCellVisible": true,
+                                        "isDerived": false,
+                                        "label": "createDate",
+                                        "computedValue": "{{contacts_table.sanitizedTableData.map((currentRow) => ( currentRow.createDate))}}"
+                                    },
+                                    "deleted": {
+                                        "index": 11,
+                                        "width": 150,
+                                        "id": "deleted",
+                                        "horizontalAlignment": "LEFT",
+                                        "verticalAlignment": "CENTER",
+                                        "columnType": "text",
+                                        "textSize": "PARAGRAPH",
+                                        "enableFilter": true,
+                                        "enableSort": true,
+                                        "isVisible": true,
+                                        "isDisabled": false,
+                                        "isCellVisible": true,
+                                        "isDerived": false,
+                                        "label": "deleted",
+                                        "computedValue": "{{contacts_table.sanitizedTableData.map((currentRow) => ( currentRow.deleted))}}"
+                                    }
+                                },
+                                "derivedColumns": {
+                                    "customColumn2": {
+                                        "index": 5,
+                                        "width": 150,
+                                        "id": "customColumn2",
+                                        "columnType": "text",
+                                        "enableFilter": true,
+                                        "enableSort": true,
+                                        "isVisible": true,
+                                        "isDisabled": false,
+                                        "isCellVisible": true,
+                                        "isDerived": true,
+                                        "label": "contact owner email",
+                                        "computedValue": "{{contacts_table.sanitizedTableData.map((currentRow) => ( main.user.auth_module.user.info.user._id))}}",
+                                        "buttonStyle": "rgb(3, 179, 101)",
+                                        "buttonColor": "#03B365",
+                                        "menuColor": "#03B365",
+                                        "labelColor": "#FFFFFF"
+                                    },
+                                    "customColumn3": {
+                                        "index": 6,
+                                        "width": 150,
+                                        "id": "customColumn3",
+                                        "columnType": "text",
+                                        "enableFilter": true,
+                                        "enableSort": true,
+                                        "isVisible": true,
+                                        "isDisabled": false,
+                                        "isCellVisible": true,
+                                        "isDerived": true,
+                                        "label": "created at",
+                                        "computedValue": "",
+                                        "buttonStyle": "rgb(3, 179, 101)",
+                                        "buttonColor": "#03B365",
+                                        "menuColor": "#03B365",
+                                        "labelColor": "#FFFFFF"
+                                    },
+                                    "customColumn7": {
+                                        "index": 10,
+                                        "width": 150,
+                                        "id": "customColumn7",
+                                        "columnType": "iconButton",
+                                        "enableFilter": true,
+                                        "enableSort": true,
+                                        "isVisible": true,
+                                        "isDisabled": false,
+                                        "isCellVisible": true,
+                                        "isDerived": true,
+                                        "label": "view",
+                                        "computedValue": "",
+                                        "buttonStyle": "rgb(3, 179, 101)",
+                                        "buttonColor": "#2E3D49",
+                                        "menuColor": "#03B365",
+                                        "labelColor": "#FFFFFF",
+                                        "iconName": "eye-open",
+                                        "borderRadius": "CIRCLE"
+                                    }
+                                },
+                                "tableData": "{{getLists.data}}",
+                                "columnSizeMap": {
+                                    "task": 245,
+                                    "step": 62,
+                                    "status": 75
+                                },
+                                "columnOrder": [
+                                    "_id",
+                                    "name",
+                                    "email",
+                                    "phone",
+                                    "leadstatus",
+                                    "comment",
+                                    "owner",
+                                    "country",
+                                    "city",
+                                    "industry",
+                                    "createDate",
+                                    "deleted",
+                                    "customColumn2",
+                                    "customColumn3",
+                                    "customColumn7"
+                                ],
+                                "enableClientSideSearch": true,
+                                "isVisibleSearch": true,
+                                "isVisibleFilters": true,
+                                "isVisibleDownload": true,
+                                "isVisiblePagination": true,
+                                "isSortable": true,
+                                "delimiter": ",",
+                                "version": 3,
+                                "type": "TABLE_WIDGET",
+                                "hideCard": false,
+                                "displayName": "Table",
+                                "key": "pxmmdg5433",
+                                "iconSVG": "/static/media/icon.db8a9cbd.svg",
+                                "widgetId": "77yyhl0ohs",
+                                "renderMode": "CANVAS",
+                                "isLoading": false,
+                                "parentColumnSpace": 10.34375,
+                                "parentRowSpace": 10,
+                                "leftColumn": 7,
+                                "rightColumn": 64,
+                                "topRow": 13,
+                                "bottomRow": 46,
+                                "parentId": "0",
+                                "dynamicTriggerPathList": [
+                                    {
+                                        "key": "primaryColumns.customColumn7.onClick"
+                                    }
+                                ],
+                                "dynamicPropertyPathList": []
+                            },
+                            {
+                                "width": 456,
+                                "height": 240,
+                                "canEscapeKeyClose": true,
+                                "animateLoading": true,
+                                "detachFromLayout": true,
+                                "canOutsideClickClose": true,
+                                "shouldScrollContents": true,
+                                "widgetName": "list_modal",
+                                "children": [
+                                    {
+                                        "isVisible": true,
+                                        "widgetName": "Canvas22",
+                                        "version": 1,
+                                        "detachFromLayout": true,
+                                        "type": "CANVAS_WIDGET",
+                                        "hideCard": true,
+                                        "displayName": "Canvas",
+                                        "key": "htzqdzaajx",
+                                        "canExtend": true,
+                                        "isDisabled": false,
+                                        "shouldScrollContents": false,
+                                        "children": [
+                                            {
+                                                "isVisible": true,
+                                                "iconName": "cross",
+                                                "borderRadius": "SHARP",
+                                                "boxShadow": "NONE",
+                                                "buttonColor": "#2E3D49",
+                                                "buttonVariant": "TERTIARY",
+                                                "isDisabled": false,
+                                                "widgetName": "IconButton2",
+                                                "version": 1,
+                                                "animateLoading": true,
+                                                "type": "ICON_BUTTON_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Icon Button",
+                                                "key": "4bh1cbfr97",
+                                                "iconSVG": "/static/media/icon.1a0c634a.svg",
+                                                "iconSize": 24,
+                                                "widgetId": "h6npihyrfo",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "leftColumn": 56,
+                                                "rightColumn": 64,
+                                                "topRow": 1,
+                                                "bottomRow": 5,
+                                                "parentId": "ckwp6e3uxu",
+                                                "onClick": "{{closeModal('Modal1')}}"
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "text": "Create List",
+                                                "fontSize": "HEADING1",
+                                                "fontStyle": "BOLD",
+                                                "textAlign": "LEFT",
+                                                "textColor": "#231F20",
+                                                "truncateButtonColor": "#FFC13D",
+                                                "widgetName": "Text12",
+                                                "shouldTruncate": false,
+                                                "overflow": "NONE",
+                                                "version": 1,
+                                                "animateLoading": true,
+                                                "type": "TEXT_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Text",
+                                                "key": "t3jwt3hqwy",
+                                                "iconSVG": "/static/media/icon.97c59b52.svg",
+                                                "widgetId": "bcdwb18bgg",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "leftColumn": 1,
+                                                "rightColumn": 41,
+                                                "topRow": 1,
+                                                "bottomRow": 5,
+                                                "parentId": "ckwp6e3uxu",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": []
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "animateLoading": true,
+                                                "text": "Close",
+                                                "buttonColor": "#03B365",
+                                                "buttonVariant": "SECONDARY",
+                                                "placement": "CENTER",
+                                                "widgetName": "Button4",
+                                                "isDisabled": false,
+                                                "isDefaultClickDisabled": true,
+                                                "recaptchaType": "V3",
+                                                "version": 1,
+                                                "classStyle": "",
+                                                "type": "BUTTON_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Button",
+                                                "key": "f5gd7ph78q",
+                                                "iconSVG": "/static/media/icon.cca02633.svg",
+                                                "buttonStyle": "PRIMARY",
+                                                "widgetId": "5e7afvjlbx",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "leftColumn": 36,
+                                                "rightColumn": 48,
+                                                "topRow": 16,
+                                                "bottomRow": 20,
+                                                "parentId": "ckwp6e3uxu",
+                                                "onClick": "{{closeModal('list_modal')}}",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "animateLoading": true,
+                                                "text": "Confirm",
+                                                "buttonColor": "#03B365",
+                                                "buttonVariant": "PRIMARY",
+                                                "placement": "CENTER",
+                                                "widgetName": "create_list_btn",
+                                                "isDisabled": false,
+                                                "isDefaultClickDisabled": true,
+                                                "recaptchaType": "V3",
+                                                "version": 1,
+                                                "classStyle": "",
+                                                "type": "BUTTON_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Button",
+                                                "key": "f5gd7ph78q",
+                                                "iconSVG": "/static/media/icon.cca02633.svg",
+                                                "buttonStyle": "PRIMARY_BUTTON",
+                                                "widgetId": "kcnt1mj2tn",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "leftColumn": 48,
+                                                "rightColumn": 60,
+                                                "topRow": 16,
+                                                "bottomRow": 20,
+                                                "parentId": "ckwp6e3uxu",
+                                                "onClick": "{{createList.run(() => showAlert('1','success'), () => showAlert('2','error'))}}",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": [
+                                                    {
+                                                        "key": "onClick"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "label": "Name",
+                                                "labelPosition": "Left",
+                                                "labelAlignment": "left",
+                                                "labelWidth": 5,
+                                                "widgetName": "list_name",
+                                                "version": 2,
+                                                "defaultText": "",
+                                                "iconAlign": "left",
+                                                "autoFocus": false,
+                                                "labelStyle": "",
+                                                "resetOnSubmit": true,
+                                                "isRequired": false,
+                                                "isDisabled": false,
+                                                "animateLoading": true,
+                                                "classStyle": "",
+                                                "inputType": "TEXT",
+                                                "buttonPosition": "right",
+                                                "type": "INPUT_WIDGET_V2",
+                                                "hideCard": false,
+                                                "displayName": "Input",
+                                                "key": "o9ykpg0qug",
+                                                "iconSVG": "/static/media/icon.9f505595.svg",
+                                                "widgetId": "k0f8yic2pm",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "parentColumnSpace": 6.9375,
+                                                "parentRowSpace": 10,
+                                                "leftColumn": 2,
+                                                "rightColumn": 60,
+                                                "topRow": 6,
+                                                "bottomRow": 10,
+                                                "parentId": "ckwp6e3uxu",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": []
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "label": "Description",
+                                                "labelPosition": "Left",
+                                                "labelAlignment": "left",
+                                                "labelWidth": 5,
+                                                "widgetName": "list_description",
+                                                "version": 2,
+                                                "defaultText": "",
+                                                "iconAlign": "left",
+                                                "autoFocus": false,
+                                                "labelStyle": "",
+                                                "resetOnSubmit": true,
+                                                "isRequired": false,
+                                                "isDisabled": false,
+                                                "animateLoading": true,
+                                                "classStyle": "",
+                                                "inputType": "TEXT",
+                                                "buttonPosition": "right",
+                                                "type": "INPUT_WIDGET_V2",
+                                                "hideCard": false,
+                                                "displayName": "Input",
+                                                "key": "o9ykpg0qug",
+                                                "iconSVG": "/static/media/icon.9f505595.svg",
+                                                "widgetId": "k4e31zztao",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "parentColumnSpace": 6.9375,
+                                                "parentRowSpace": 10,
+                                                "leftColumn": 2,
+                                                "rightColumn": 60,
+                                                "topRow": 11,
+                                                "bottomRow": 15,
+                                                "parentId": "ckwp6e3uxu",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": []
+                                            }
+                                        ],
+                                        "minHeight": 0,
+                                        "widgetId": "ckwp6e3uxu",
+                                        "renderMode": "CANVAS",
+                                        "isLoading": false,
+                                        "parentColumnSpace": 1,
+                                        "parentRowSpace": 1,
+                                        "leftColumn": 0,
+                                        "rightColumn": 0,
+                                        "topRow": 0,
+                                        "bottomRow": 220,
+                                        "parentId": "a9ycbtm2lm"
+                                    }
+                                ],
+                                "version": 2,
+                                "type": "MODAL_WIDGET",
+                                "hideCard": false,
+                                "displayName": "Modal",
+                                "key": "ln4xjvra15",
+                                "iconSVG": "/static/media/icon.4975978e.svg",
+                                "isCanvas": true,
+                                "widgetId": "a9ycbtm2lm",
+                                "renderMode": "CANVAS",
+                                "isLoading": false,
+                                "parentColumnSpace": 1,
+                                "parentRowSpace": 1,
+                                "leftColumn": 0,
+                                "rightColumn": 0,
+                                "topRow": 0,
+                                "bottomRow": 0,
+                                "parentId": "0"
+                            },
+                            {
+                                "isVisible": true,
+                                "placeholderText": "Select option",
+                                "labelText": "Label",
+                                "labelPosition": "Left",
+                                "labelAlignment": "left",
+                                "labelWidth": 5,
+                                "options": "{{GetOwners.data}}",
+                                "serverSideFiltering": false,
+                                "widgetName": "Select1",
+                                "defaultOptionValue": "{{main.user.auth_module.user.info.user._id}}",
+                                "version": 1,
+                                "isFilterable": true,
+                                "isRequired": false,
+                                "isDisabled": false,
+                                "animateLoading": true,
+                                "type": "SELECT_WIDGET",
+                                "hideCard": false,
+                                "displayName": "Select",
+                                "key": "nx59owp6ip",
+                                "iconSVG": "/static/media/icon.bd99caba.svg",
+                                "widgetId": "e4dd3fceuo",
+                                "renderMode": "CANVAS",
+                                "isLoading": false,
+                                "parentColumnSpace": 8.3125,
+                                "parentRowSpace": 10,
+                                "leftColumn": 7,
+                                "rightColumn": 47,
+                                "topRow": 7,
+                                "bottomRow": 11,
+                                "parentId": "0",
+                                "dynamicBindingPathList": [
+                                    {
+                                        "key": "options"
+                                    },
+                                    {
+                                        "key": "defaultOptionValue"
+                                    }
+                                ],
+                                "dynamicTriggerPathList": []
+                            }
+                        ],
+                        "snapRows": 54,
+                        "containerStyle": "none",
+                        "canExtend": true,
+                        "version": 57
+                    },
+                    "widgetNames": [
+                        "MainContainer",
+                        "create_list",
+                        "lists_table",
+                        "list_modal",
+                        "Canvas22",
+                        "IconButton2",
+                        "Text12",
+                        "Button4",
+                        "create_list_btn",
+                        "list_name",
+                        "list_description",
+                        "Select1"
+                    ],
+                    "deleted": false,
+                    "policies": [],
+                    "layoutOnLoadActions": [
+                        [
+                            {
+                                "_id": "661ee41511d6021f9a0b6295",
+                                "id": "661ee41511d6021f9a0b6295",
+                                "confirmBeforeExecute": false,
+                                "name": "getLists",
+                                "pluginType": "API",
+                                "jsonPathKeys": [],
+                                "timeoutInMillisecond": 10000
+                            },
+                            {
+                                "_id": "662ab5a93dfdeb2c3d9d2c38",
+                                "id": "662ab5a93dfdeb2c3d9d2c38",
+                                "confirmBeforeExecute": false,
+                                "name": "Api1",
+                                "pluginType": "API",
+                                "jsonPathKeys": [],
+                                "timeoutInMillisecond": 10000
+                            }
+                        ]
+                    ],
+                    "layoutOnCloseActions": [
+                        []
+                    ]
+                }
+            ]
+        },
+        "createdAt": "2024-04-16T20:46:13.978Z",
+        "updatedAt": "2024-04-16T20:46:13.978Z",
         "deleted": false,
         "policies": [
             {
